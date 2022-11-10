@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Title>SimpleCountry: All Countries in One Package</Title>
+    <Authors>Luiz Camargo</Authors>
+    <Company>$(Authors)</Company>
+    <Description>Get access to an interface that helps you search for different countries</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\countries.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\countries.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
