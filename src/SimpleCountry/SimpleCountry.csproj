@@ -8,6 +8,13 @@
     <Authors>Luiz Camargo</Authors>
     <Company>$(Authors)</Company>
     <Description>Get access to an interface that helps you search for different countries</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageIcon>Design sem nome.png</PackageIcon>
+    <RepositoryUrl>https://github.com/luizcamargo99/SimpleCountry</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageTags>Countries; Country; Flags; Países; Bandeiras; </PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +27,13 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Downloads\Design sem nome.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
