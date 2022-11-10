@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Reflection;
 
 namespace SimpleCountry;
 
@@ -8,7 +9,9 @@ public class CountryService : ICountryService
 
     public CountryService()
     {
-        _countries = JsonConvert.DeserializeObject<IEnumerable<Country>>(new StreamReader("./Data/countries.json").ReadToEnd()).OrderBy(x => x.Name.Common);
+        var currentAssembly = Assembly.GetExecutingAssembly();
+        var streamReader = new StreamReader(currentAssembly.GetManifestResourceStream("SimpleCountry.countries.json"));
+        _countries = JsonConvert.DeserializeObject<IEnumerable<Country>>(streamReader.ReadToEnd()).OrderBy(x => x.Name.Common).ToList();
     }
 
     public IEnumerable<Country> GetAll()

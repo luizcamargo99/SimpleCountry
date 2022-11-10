@@ -15,18 +15,19 @@
     <PackageReleaseNotes>First Release</PackageReleaseNotes>
     <PackageTags>Countries; Country; Flags; Países; Bandeiras; </PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
   </PropertyGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="countries.json" />
+	</ItemGroup>
 
   <ItemGroup>
-    <None Remove="Data\countries.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Data\countries.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Resource Include="countries.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
