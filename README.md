@@ -7,13 +7,13 @@ Nuget Package intended for accessing country information, containing 250 countri
 - Package Manager
 
 ```
-NuGet\Install-Package SimpleCountry -Version 1.0.2
+NuGet\Install-Package SimpleCountry -Version 1.0.3
 ```
 
 - .NET CLI
 
 ```
-dotnet add package SimpleCountry --version 1.0.2
+dotnet add package SimpleCountry --version 1.0.3
 ```
 
 
