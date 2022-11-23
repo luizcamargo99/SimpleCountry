@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <Title>SimpleCountry: All Countries in One Package</Title>
@@ -15,7 +15,7 @@
     <PackageReleaseNotes>First Release</PackageReleaseNotes>
     <PackageTags>Countries; Country; Flags; Países; Bandeiras; </PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 	
 	<ItemGroup>
@@ -38,7 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" Condition="'$(TargetFramework)' == 'net7.0'"/>
+	<PackageReference Include="Newtonsoft.Json" Version="12.0.3" Condition="'$(TargetFramework)' == 'net6.0'"/>
   </ItemGroup>
 
 </Project>
